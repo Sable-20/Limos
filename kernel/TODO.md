@@ -1,0 +1,21 @@
+- [ ] create `kernel.h`
+  - [ ] restructure `kernel.c` to work with header file 
+- [ ] write IDT
+- [ ] bitmap allocator
+- [ ] virtual memory manager
+- [ ] ACPI tables
+  - [ ] MADT first
+- [ ] start other CPUs
+  - Limine provides functionality for this
+- [ ] APIC interrupt controller
+- [ ] Local APIC, PIT, or HPET
+- [ ] scheduler
+- [ ] UNIX VFS
+- [ ] mem only tmpfs
+- [ ] abstract devices
+  - UNIX strat of `/dev` VFS and `ioctl()`
+- [ ] userland calls, run in ring 3
+- [ ] syscalls
+- [ ] PCI driver
+- [ ] AHCI, NVMe storage devices
+- [ ] mlibc(???? *maybe* glibc better??? choose later) 
