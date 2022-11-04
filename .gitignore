@@ -1,13 +1,4 @@
-limine
-ovmf-X64
-ovmf-x64
-kernel/limine.h
-
-*.elf
-*.iso
-*.hdd
-*.o
-*.d
+target/
 
 .ccls-cache/
 .replit
