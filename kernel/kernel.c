@@ -1,3 +1,5 @@
+#include "kernel.h"
+
 // kernel entry point
 void _start(void) {
   // ensure terminal connection
