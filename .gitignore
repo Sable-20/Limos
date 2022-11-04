@@ -8,3 +8,7 @@ kernel/limine.h
 *.hdd
 *.o
 *.d
+
+.ccls-cache/
+.replit
+replit.nix
