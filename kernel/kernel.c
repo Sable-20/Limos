@@ -1,22 +1,3 @@
-#include <limine.h>
-#include <stddef.h>
-#include <stdint.h>
-
-// make requests volatile so compiler doesnt
-// optimize it away
-static volatile struct limine_terminal_request terminal_request = {
-  .id = LIMINE_TERMINAL_REQUEST, 
-  .revision = 0
-};
-
-
-// hang convenience function
-static void done(void) {
-  for (;;) {
-    __asm__("hlt");
-  }
-}
-
 // kernel entry point
 void _start(void) {
   // ensure terminal connection
@@ -28,7 +9,12 @@ void _start(void) {
 
   // simple hello world, do more later
   struct limine_terminal *terminal = terminal_request.response->terminals[0];
-  terminal_request.response->write(terminal, "Hello world", 11);
+  write(terminal, "Hello world", 11);
 
   // hang for now
+  done();
+}
+
+void write(limine_terminal *term, char* text, uint_8 length) {
+  terminal_request->response->write(term, text, length);
 }
